@@ -6,13 +6,19 @@
         xmlns:local="clr-namespace:MyDocs"
         mc:Ignorable="d" WindowStyle="None" AllowsTransparency="True" Background="Transparent"
         Title="MainWindow" Height="450" Width="800">
-    <Border Background="White" CornerRadius="20" BorderThickness="3" BorderBrush="#0063FF">
+    <Border Name="Window" MouseDown="Window_MouseDown" Background="White" CornerRadius="20" BorderThickness="3" BorderBrush="#0063FF">
         <Grid>
-            <Grid>
+            <Grid VerticalAlignment="Top" Height="55">
+                <Border VerticalAlignment="Center" HorizontalAlignment="Left" Height="45" Width="45" Margin="6,0,0,0" BorderBrush="#0063FF" BorderThickness="1" CornerRadius="12" Background="#4C6697"></Border>
+                <Border VerticalAlignment="Center" HorizontalAlignment="Left" Height="45" Width="45" Margin="56,0,0,0" BorderBrush="#0063FF" BorderThickness="1" CornerRadius="12" Background="#4C6697"></Border>
+
+                <Button Name="Close_Button" Height="45" Width="45" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,6,0" Style="{StaticResource Rounded_Button}"></Button>
+                <Button Name="Minimize_Button" Height="45" Width="45" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,56,0" Style="{StaticResource Rounded_Button}"></Button>
                 
+                <Rectangle VerticalAlignment="Bottom" Height="3" Fill="#0063FF"></Rectangle>
             </Grid>
-            <Grid>
-                
+            <Grid VerticalAlignment="Top" Height="389" Margin="0,55,0,0">
+
             </Grid>
         </Grid>
     </Border>
