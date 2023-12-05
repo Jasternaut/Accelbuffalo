@@ -32,5 +32,15 @@ namespace MyDocs
                 this.DragMove();
             }
         }
+
+        private void Close_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void Minimize_Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
     }
 }
