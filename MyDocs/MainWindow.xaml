@@ -14,6 +14,8 @@
                     <Border VerticalAlignment="Center" HorizontalAlignment="Left" Height="45" Width="45" Margin="6,0,0,0" BorderBrush="#0063FF" BorderThickness="1" CornerRadius="12" Background="#4C6697"></Border>
                     <Border VerticalAlignment="Center" HorizontalAlignment="Left" Height="45" Width="45" Margin="56,0,0,0" BorderBrush="#0063FF" BorderThickness="1" CornerRadius="12" Background="#4C6697"></Border>
 
+                    <Label VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Accelbuffalo" FontFamily="Segoe UI" FontSize="22" FontWeight="Bold"></Label>
+                    
                     <Button Name="Close_Button" Click="Close_Button_Click" Height="45" Width="45" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,6,0" Style="{StaticResource Rounded_Button}" FontFamily="Segoe UI" Content="X" FontSize="20" FontWeight="Bold"></Button>
                     <Button Name="Minimize_Button" Click="Minimize_Button_Click" Height="45" Width="45" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,56,0" Style="{StaticResource Rounded_Button}" FontFamily="Segoe UI" Content="-" FontSize="20" FontWeight="Bold"></Button>
 
