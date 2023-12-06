@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.2" />
     <PackageReference Include="Microsoft.Office.Interop.Word" Version="15.0.4797.1004" />
   </ItemGroup>
 
@@ -29,12 +30,15 @@
     <Resource Include="Fonts\Montserrat-Medium.ttf">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="icon.png" />
-    <Resource Include="ДОКУМЕНТЫ.png" />
-    <Resource Include="ЛОГО.png" />
-    <Resource Include="ОТПРАВИТЬ.png" />
-    <Resource Include="Уведомления.png" />
-    <Resource Include="ФРИ.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Database.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Database_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

@@ -11,14 +11,14 @@
         <Grid>
             <Border VerticalAlignment="Top" Height="100" Background="#0A2049" CornerRadius="0">
                 <Grid>
-                    <Border VerticalAlignment="Center" HorizontalAlignment="Left" Height="75" Width="75" Margin="6,0,0,0" BorderThickness="1" CornerRadius="12" >
+                    <Border VerticalAlignment="Center" HorizontalAlignment="Left" Height="75" Width="75" Margin="6,0,0,0" BorderThickness="0" CornerRadius="12" >
                         <Border.Background>
-                            <ImageBrush Stretch="Fill" ImageSource="/ЛОГО.png"/>
+                            <ImageBrush Stretch="Fill" ImageSource="/Images/logo.png"/>
                         </Border.Background>
                     </Border>
-                    <Border VerticalAlignment="Center" HorizontalAlignment="Left" Height="75" Width="75" Margin="86,0,0,0" BorderThickness="1" CornerRadius="12">
+                    <Border VerticalAlignment="Center" HorizontalAlignment="Left" Height="75" Width="75" Margin="86,0,0,0" BorderThickness="0" CornerRadius="12">
                         <Border.Background>
-                            <ImageBrush ImageSource="/ФРИ.png" Stretch="Uniform"/>
+                            <ImageBrush ImageSource="/Images/fri.png" Stretch="Uniform"/>
                         </Border.Background>
                     </Border>
 
@@ -32,7 +32,7 @@
                         <Border VerticalAlignment="Top" Height="55" Background="#0A2049" CornerRadius="10">
                             <Grid>
                                 <Label Content="Уведомления" Foreground="White" FontSize="22" VerticalContentAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0"></Label>
-                                <Image Height="40" Width="40" HorizontalAlignment="Left" Margin="2,0,0,0" Source="/Уведомления.png"></Image>
+                                <Image Height="40" Width="40" HorizontalAlignment="Left" Margin="2,0,0,0" Source="/Images/notify.png"></Image>
                             </Grid>
                         </Border>
                     </Grid>
@@ -43,7 +43,7 @@
                         <Border VerticalAlignment="Top" Height="55" Width="250" HorizontalAlignment="Left" Background="#0A2049" CornerRadius="10">
                             <Grid>
                                 <Label Content="Документ" Foreground="White" FontSize="22" VerticalContentAlignment="Center" HorizontalAlignment="Right" Margin="0,0,50,0"></Label>
-                                <Image Height="40" Width="40" HorizontalAlignment="Left" Margin="5,0,0,0" Source="/ДОКУМЕНТЫ.png"></Image>
+                                <Image Height="40" Width="40" HorizontalAlignment="Left" Margin="5,0,0,0" Source="/Images/documents.png"></Image>
                             </Grid>
                         </Border>
 
@@ -79,14 +79,14 @@
                 <Border VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="255" Height="55" Background="#0A2049" CornerRadius="10" Margin="0,0,10,80">
                     <Grid>
                         <Label VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Подписать документ" FontSize="18" Foreground="white" Margin="30,0,0,0"></Label>
-                        <Image Height="25" Width="25" HorizontalAlignment="Left" Margin="9,0,0,0" Source="/icon.png"></Image>
+                        <Image Height="25" Width="25" HorizontalAlignment="Left" Margin="9,0,0,0" Source="/Images/icon.png"></Image>
                     </Grid>
                 </Border>
 
                 <Border VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="255" Height="55" Background="#0A2049" CornerRadius="10" Margin="0,0,10,14">
                     <Grid>
                         <Label VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Отправить" FontSize="18" Foreground="White" Margin="0,0,60,0"></Label>
-                        <Image Height="25" Width="25" HorizontalAlignment="Left" Margin="9,0,0,0" Source="/ОТПРАВИТЬ.png"></Image>
+                        <Image Height="25" Width="25" HorizontalAlignment="Left" Margin="9,0,0,0" Source="/Images/send.png"></Image>
                     </Grid>
                 </Border>
             </Grid>
