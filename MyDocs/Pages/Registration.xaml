@@ -36,21 +36,21 @@
                     <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="Регистрация" FontSize="23" FontWeight="Bold" VerticalAlignment="Top" Height="40" Padding="0,0,0,5"></Label>
                 </Border>
 
-                <TextBox Name="username" VerticalContentAlignment="Center" Padding="10,0,0,0" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="226" Height="35" Margin="0,0,0,180">
+                <TextBox Name="username" Text="логин" VerticalContentAlignment="Center" Padding="10,0,0,0" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="226" Height="35" Margin="0,0,0,180">
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="20"></Setter>
                         </Style>
                     </TextBox.Resources>
                 </TextBox>
-                <TextBox Name="password" VerticalContentAlignment="Center" Padding="10,0,0,0" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="226" Height="35" Margin="0,0,0,130">
+                <TextBox Name="password" Text="пароль" VerticalContentAlignment="Center" Padding="10,0,0,0" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="226" Height="35" Margin="0,0,0,130">
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="20"></Setter>
                         </Style>
                     </TextBox.Resources>
                 </TextBox>
-                <TextBox Name="organisation" VerticalContentAlignment="Center" Padding="10,0,0,0" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="226" Height="35" Margin="0,0,0,80">
+                <TextBox Name="organisation" Text="организация" VerticalContentAlignment="Center" Padding="10,0,0,0" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="226" Height="35" Margin="0,0,0,80">
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="20"></Setter>

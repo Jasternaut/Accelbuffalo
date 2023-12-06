@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Accelbuffalo.Core;
+using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -23,7 +25,9 @@ namespace Accelbuffalo.Pages
     {
         public Main()
         {
-            InitializeComponent();
+            InitializeComponent();          
+
+            
         }
 
         // закрытие приложения
@@ -108,6 +112,26 @@ namespace Accelbuffalo.Pages
                         Document_Viewer.Text += line2 + "\n";
                     }
                 }
+            }
+        }
+
+        private async void UsernameLabel_Loaded(object sender, RoutedEventArgs e)
+        {
+            DatabaseCore core = new DatabaseCore();
+            while (true)
+            {              
+                UsernameLabel.Content = core.GetName();
+                await Task.Delay(2000);
+            }      
+        }
+
+        private async void OrganisationLabel_Loaded(object sender, RoutedEventArgs e)
+        {
+            DatabaseCore core = new DatabaseCore();
+            while (true)
+            {
+                OrganisationLabel.Content = core.GetOrganisation();
+                await Task.Delay(2000);
             }
         }
     }

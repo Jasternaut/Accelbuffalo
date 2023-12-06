@@ -1,4 +1,6 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using Accelbuffalo.Core;
+using Microsoft.Data.SqlClient;
+using MyDocs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,7 +37,66 @@ namespace Accelbuffalo.Pages
         // registration
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            if (username.Text != String.Empty && password.Text != String.Empty && organisation.Text != String.Empty)
+            {
+                command = new SqlCommand("select * from LoginTable where username='" + username.Text + "'", connection);
+                reader = command.ExecuteReader();
 
+                if (reader.Read())
+                {
+                    reader.Close();
+                    // если имя пользователя подошло, то ...
+                    command = new SqlCommand("select * from LoginTable where password='" + password.Text + "'", connection);
+                    reader = command.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        reader.Close();
+                        MessageBox.Show("Аккаунт был найден! Теперь вы можете пользоваться приложением!");
+
+                        NavigationService nav;
+                        nav = NavigationService.GetNavigationService(this);
+                        nav.Navigate(new System.Uri("Pages\\Main.xaml", UriKind.RelativeOrAbsolute));
+
+                        DatabaseCore core = new DatabaseCore();
+                        core.SetName(username.Text);
+                        core.SetOrganisation(organisation.Text);                        
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("Неверный пароль. Пожалуйста, попробуйте ещё раз.");
+                    }
+                }
+                else
+                {
+                    // если пользователь  не зарегистрирован, то ...
+                    reader.Close();
+
+                    command = new SqlCommand("INSERT INTO LoginTable (username, password, organisation) " +
+                        "VALUES(@username, @password, @organisation)", connection);
+                    command.Parameters.AddWithValue("@username", username.Text.ToString());
+                    command.Parameters.AddWithValue("@password", password.Text.ToString());
+                    command.Parameters.AddWithValue("@organisation", organisation.Text.ToString());
+                    command.ExecuteNonQuery();
+
+                    MessageBox.Show("Аккаунт был успешно создан. Теперь вы можете пользоваться приложением!");
+
+                    NavigationService nav;
+                    nav = NavigationService.GetNavigationService(this);
+                    nav.Navigate(new System.Uri("Pages\\Main.xaml", UriKind.RelativeOrAbsolute));
+
+                    DatabaseCore core = new DatabaseCore();
+                    core.SetName(username.Text);
+                    core.SetOrganisation(organisation.Text);
+
+                    
+                    
+                }
+            }
+            else
+            {
+                MessageBox.Show("Не все данные введены. Пожалуйста, заполните все поля.");
+            }
         }
     }
 }

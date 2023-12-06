@@ -9,7 +9,7 @@
 
     <Border Name="Window" MouseDown="Window_MouseDown" Background="White" CornerRadius="0">
         <Grid>
-            <Frame Name="FrameView"></Frame>
+            <Frame Name="FrameView" x:FieldModifier="public" NavigationUIVisibility="Hidden"></Frame>
         </Grid>
     </Border>
 </Window>

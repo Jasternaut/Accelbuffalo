@@ -17,14 +17,17 @@
                             <ImageBrush Stretch="Fill" ImageSource="/logo.png"/>
                         </Border.Background>
                     </Border>
-                    <Border VerticalAlignment="Center" HorizontalAlignment="Left" Height="75" Width="75" Margin="86,0,0,0" BorderThickness="0" CornerRadius="12">
-                        <Border.Background>
-                            <ImageBrush Stretch="Uniform" ImageSource="/fri.png"/>
-                        </Border.Background>
+                    <Border VerticalAlignment="Center" HorizontalAlignment="Left" Height="75" Width="95" Background="White" BorderThickness="2" BorderBrush="#0063FF" Margin="86,0,0,0" CornerRadius="12">
+                        <Image Source="/Pages/fri.png" ></Image>
                     </Border>
 
-                    <Button Name="Close_Button" Click="Close_Button_Click" Height="45" Width="45" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,6,0" Style="{StaticResource Rounded_Button}" FontFamily="Segoe UI" Content="X" FontSize="20" FontWeight="Bold"></Button>
-                    <Button Name="Minimize_Button" Click="Minimize_Button_Click" Height="45" Width="45" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,56,0" Style="{StaticResource Rounded_Button}" FontFamily="Segoe UI" Content="-" FontSize="20" FontWeight="Bold"></Button>
+                    <Image Height="75" Width="75" HorizontalAlignment="Right" Margin="0,0,240,0" Source="/Pages/Person.png" ></Image>
+                    <Border VerticalAlignment="Center" HorizontalAlignment="Right" Width="220" Height="50" Background="White" CornerRadius="10" Margin="0,0,40,0">
+                        <Grid>
+                            <Label HorizontalAlignment="Center" VerticalAlignment="Top" Name="UsernameLabel" Content="Nickname" FontWeight="Bold" x:FieldModifier="public" Loaded="UsernameLabel_Loaded"></Label>
+                            <Label HorizontalAlignment="Center" VerticalAlignment="Bottom" Name="OrganisationLabel" Content="organisation" x:FieldModifier="public" Loaded="OrganisationLabel_Loaded"></Label>
+                        </Grid>
+                    </Border>
                 </Grid>
             </Border>
             <Grid VerticalAlignment="Top" Height="394" Margin="0,100,0,0">
