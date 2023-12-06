@@ -115,6 +115,7 @@ namespace MyDocs
 
                     foreach (string line2 in line)
                     {
+                        // загрузка в редактор
                         Document_Viewer.Text += line2 + "\n";
                     }
                 }
