@@ -47,11 +47,22 @@
                             </Grid>
                         </Border>
 
-                        <Border VerticalAlignment="Top" Height="55" Width="180" HorizontalAlignment="Left" Background="#0A2049" CornerRadius="10" Margin="255,0,0,0">
+                        <Border VerticalAlignment="Top" Height="35" Width="180" HorizontalAlignment="Left" Background="#0A2049" CornerRadius="10" Margin="255,0,0,0">
                             <Grid>
                                 <Label Name="Document_Name" Content="" Foreground="White" FontSize="22" VerticalContentAlignment="Center" HorizontalAlignment="Center"></Label>
                             </Grid>
                         </Border>
+
+                        <Button Name="Save_Button" Click="Save_Button_Click" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,37,0,0" Width="90" Height="20" Background="#0A2049" Foreground="White" Content="Сохранить"></Button>
+                        <Button Name="Load_Button" Click="Load_Button_Click" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,37,90,0" Width="90" Height="20" Background="#0A2049" Foreground="White" Content="Загрузить"></Button>
+                        
+                        <TextBox Name="Document_Viewer" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" VerticalAlignment="Bottom" Height="280" Foreground="Black" InputScope="Default" Margin="0,0,0,30">
+                            
+                        </TextBox>
+                        <Border VerticalAlignment="Bottom" HorizontalAlignment="Left" Background="#0A2049" CornerRadius="6" Width="280" Height="30">
+                            <Label Name="CurrentDocument" Content="Текущий документ" VerticalContentAlignment="Center" Foreground="White"></Label>
+                        </Border>
+                        <Button Name="browse" Content="Открыть" Background="#0A2049" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="30" Width="100" Click="browse_Click"></Button>
                     </Grid>
                 </Border>
 
