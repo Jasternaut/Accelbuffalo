@@ -5,44 +5,77 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyDocs"
         mc:Ignorable="d" WindowStyle="None" AllowsTransparency="True" Background="Transparent"
-        Title="MainWindow" Height="450" Width="900">
+        Title="MainWindow" Height="500" Width="950" FontFamily="Fonts/Montserrat-Medium.ttf #Montserrat Medium">
 
-    <Border Name="Window" MouseDown="Window_MouseDown" Background="White" CornerRadius="20" BorderThickness="3" BorderBrush="#0063FF">
+    <Border Name="Window" MouseDown="Window_MouseDown" Background="White" CornerRadius="0">
         <Grid>
-            <Border VerticalAlignment="Top" Height="55" Background="#E7F2FF" CornerRadius="20,20,0,0">
+            <Border VerticalAlignment="Top" Height="100" Background="#0A2049" CornerRadius="0">
                 <Grid>
-                    <Border VerticalAlignment="Center" HorizontalAlignment="Left" Height="45" Width="45" Margin="6,0,0,0" BorderBrush="#0063FF" BorderThickness="1" CornerRadius="12" Background="#4C6697"></Border>
-                    <Border VerticalAlignment="Center" HorizontalAlignment="Left" Height="45" Width="45" Margin="56,0,0,0" BorderBrush="#0063FF" BorderThickness="1" CornerRadius="12" Background="#4C6697"></Border>
+                    <Border VerticalAlignment="Center" HorizontalAlignment="Left" Height="75" Width="75" Margin="6,0,0,0" BorderThickness="1" CornerRadius="12" >
+                        <Border.Background>
+                            <ImageBrush Stretch="Fill" ImageSource="/ЛОГО.png"/>
+                        </Border.Background>
+                    </Border>
+                    <Border VerticalAlignment="Center" HorizontalAlignment="Left" Height="75" Width="75" Margin="86,0,0,0" BorderThickness="1" CornerRadius="12">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/ФРИ.png" Stretch="Uniform"/>
+                        </Border.Background>
+                    </Border>
 
-                    <Label VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Accelbuffalo" FontFamily="Segoe UI" FontSize="22" FontWeight="Bold"></Label>
-                    
                     <Button Name="Close_Button" Click="Close_Button_Click" Height="45" Width="45" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,6,0" Style="{StaticResource Rounded_Button}" FontFamily="Segoe UI" Content="X" FontSize="20" FontWeight="Bold"></Button>
                     <Button Name="Minimize_Button" Click="Minimize_Button_Click" Height="45" Width="45" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,56,0" Style="{StaticResource Rounded_Button}" FontFamily="Segoe UI" Content="-" FontSize="20" FontWeight="Bold"></Button>
-
-                    <Rectangle VerticalAlignment="Bottom" Height="3" Fill="#0063FF"></Rectangle>
                 </Grid>
             </Border>
-            <Grid VerticalAlignment="Top" Height="389" Margin="0,55,0,0">
-                <Border VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" Height="369" Width="220" BorderBrush="#4C6697" BorderThickness="2" CornerRadius="9" Background="#E7F2FF">
+            <Grid VerticalAlignment="Top" Height="394" Margin="0,100,0,0">
+                <Border VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" Height="369" Width="220" CornerRadius="9" Background="#A8E7FF">
                     <Grid>
-                        <Label Content="Оповещения" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontFamily="Segoe UI" FontWeight="Bold"></Label>
-                        <Rectangle VerticalAlignment="Top" Margin="0,40,0,0" Fill="#FF193DC8" Height="2"></Rectangle>
+                        <Border VerticalAlignment="Top" Height="55" Background="#0A2049" CornerRadius="10">
+                            <Grid>
+                                <Label Content="Уведомления" Foreground="White" FontSize="22" VerticalContentAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0"></Label>
+                                <Image Height="40" Width="40" HorizontalAlignment="Left" Margin="2,0,0,0" Source="/Уведомления.png"></Image>
+                            </Grid>
+                        </Border>
                     </Grid>
                 </Border>
 
-                <Border VerticalAlignment="Center" HorizontalAlignment="Left" Margin="240,0,0,0" Height="369" Width="435" BorderBrush="#4C6697" BorderThickness="2" CornerRadius="9" Background="#E7F2FF">
+                <Border VerticalAlignment="Center" HorizontalAlignment="Left" Margin="240,0,0,0" Height="369" Width="435" CornerRadius="9" Background="#A8E7FF">
                     <Grid>
-                        <Label Content="Отчёт не передан" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontFamily="Segoe UI" FontWeight="Bold"></Label>
-                        <Rectangle VerticalAlignment="Top" Margin="0,40,0,0" Fill="#FF193DC8" Height="2"></Rectangle>
+                        <Border VerticalAlignment="Top" Height="55" Width="250" HorizontalAlignment="Left" Background="#0A2049" CornerRadius="10">
+                            <Grid>
+                                <Label Content="Документ" Foreground="White" FontSize="22" VerticalContentAlignment="Center" HorizontalAlignment="Right" Margin="0,0,50,0"></Label>
+                                <Image Height="40" Width="40" HorizontalAlignment="Left" Margin="5,0,0,0" Source="/ДОКУМЕНТЫ.png"></Image>
+                            </Grid>
+                        </Border>
+
+                        <Border VerticalAlignment="Top" Height="55" Width="180" HorizontalAlignment="Left" Background="#0A2049" CornerRadius="10" Margin="255,0,0,0">
+                            <Grid>
+                                <Label Name="Document_Name" Content="" Foreground="White" FontSize="22" VerticalContentAlignment="Center" HorizontalAlignment="Center"></Label>
+                            </Grid>
+                        </Border>
                     </Grid>
                 </Border>
 
-                <Border HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0" Width="200" Height="220" Background="#E7F2FF" BorderBrush="#FF193DC8" BorderThickness="2" CornerRadius="9">
+                <Border HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,15,10,0" Width="255" Height="230" Background="#A8E7FF" CornerRadius="9">
                     <Grid>
-                        <Label Content="Календарь" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontFamily="Segoe UI" FontWeight="Bold"></Label>
-                        <Calendar Name="Calendar" DisplayDate="2023-01-01" Background="White" BorderBrush="#FF193DC8" Foreground="White" VerticalAlignment="Bottom" Margin="0,0,0,10" Height="170" Width="180">
-                            
-                        </Calendar>
+                        <Border Background="#0A2049" Height="55" VerticalAlignment="Top" CornerRadius="10">
+                            <Label Content="Даты сдачи отчётов" Foreground="White" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"></Label>
+                        </Border>
+                        
+                        <Calendar Name="Calendar" DisplayDate="2023-01-01" Background="White" BorderBrush="#FF193DC8" Foreground="White" VerticalAlignment="Top" Margin="10,56,10,0" Height="170"/>
+                    </Grid>
+                </Border>
+
+                <Border VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="255" Height="55" Background="#0A2049" CornerRadius="10" Margin="0,0,10,80">
+                    <Grid>
+                        <Label VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Подписать документ" FontSize="18" Foreground="white" Margin="30,0,0,0"></Label>
+                        <Image Height="25" Width="25" HorizontalAlignment="Left" Margin="9,0,0,0" Source="/icon.png"></Image>
+                    </Grid>
+                </Border>
+
+                <Border VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="255" Height="55" Background="#0A2049" CornerRadius="10" Margin="0,0,10,14">
+                    <Grid>
+                        <Label VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Отправить" FontSize="18" Foreground="White" Margin="0,0,60,0"></Label>
+                        <Image Height="25" Width="25" HorizontalAlignment="Left" Margin="9,0,0,0" Source="/ОТПРАВИТЬ.png"></Image>
                     </Grid>
                 </Border>
             </Grid>

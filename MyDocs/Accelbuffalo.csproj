@@ -7,4 +7,30 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="icon.png" />
+    <None Remove="Montserrat-Bold.ttf" />
+    <None Remove="Montserrat-Medium.ttf" />
+    <None Remove="ДОКУМЕНТЫ.png" />
+    <None Remove="ЛОГО.png" />
+    <None Remove="ОТПРАВИТЬ.png" />
+    <None Remove="Уведомления.png" />
+    <None Remove="ФРИ.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Fonts\Montserrat-Bold.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\Montserrat-Medium.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="icon.png" />
+    <Resource Include="ДОКУМЕНТЫ.png" />
+    <Resource Include="ЛОГО.png" />
+    <Resource Include="ОТПРАВИТЬ.png" />
+    <Resource Include="Уведомления.png" />
+    <Resource Include="ФРИ.png" />
+  </ItemGroup>
+
 </Project>
