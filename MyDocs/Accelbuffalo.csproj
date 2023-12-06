@@ -8,9 +8,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="documents.png" />
+    <None Remove="fri.png" />
     <None Remove="icon.png" />
+    <None Remove="logo.png" />
     <None Remove="Montserrat-Bold.ttf" />
     <None Remove="Montserrat-Medium.ttf" />
+    <None Remove="notify.png" />
+    <None Remove="Pages\fri.png" />
+    <None Remove="Pages\logo.png" />
+    <None Remove="Pages\logo2.png" />
+    <None Remove="Pages\papers2.png" />
+    <None Remove="Pages\Registration.png" />
+    <None Remove="send.png" />
     <None Remove="ДОКУМЕНТЫ.png" />
     <None Remove="ЛОГО.png" />
     <None Remove="ОТПРАВИТЬ.png" />
@@ -24,12 +34,23 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="documents.png" />
     <Resource Include="Fonts\Montserrat-Bold.ttf">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Fonts\Montserrat-Medium.ttf">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="fri.png" />
+    <Resource Include="icon.png" />
+    <Resource Include="logo.png" />
+    <Resource Include="notify.png" />
+    <Resource Include="Pages\fri.png" />
+    <Resource Include="Pages\logo.png" />
+    <Resource Include="Pages\logo2.png" />
+    <Resource Include="Pages\papers2.png" />
+    <Resource Include="Pages\Registration.png" />
+    <Resource Include="send.png" />
   </ItemGroup>
 
   <ItemGroup>
