@@ -34,6 +34,7 @@ namespace Accelbuffalo.Pages
             
             Calendar.SelectedDate = DateTime.Now;
             int selected_day = Calendar.SelectedDate.Value.Day;
+                
             int check_day = DateTime.DaysInMonth(Calendar.SelectedDate.Value.Year, Calendar.SelectedDate.Value.Month);
             if (check_day - selected_day <= 25)
             {
