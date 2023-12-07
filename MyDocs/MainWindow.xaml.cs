@@ -28,7 +28,7 @@ namespace MyDocs
         {
             InitializeComponent();
 
-            FrameView.NavigationService.Navigate(new Registration());
+            FrameView.NavigationService.Navigate(new Welcome());
         }
 
         // передвижение окна по экрану мышкой

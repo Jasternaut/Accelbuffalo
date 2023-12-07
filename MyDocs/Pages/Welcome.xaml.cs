@@ -23,6 +23,17 @@ namespace Accelbuffalo.Pages
         public Welcome()
         {
             InitializeComponent();
+
+           
+        }
+
+        private void Grid_Loaded(object sender, RoutedEventArgs e)
+        {
+            Task.Delay(4000);
+
+            NavigationService navigation;
+            navigation = NavigationService.GetNavigationService(this);
+            navigation.Navigate(new System.Uri("Pages\\Registration.xaml", UriKind.RelativeOrAbsolute));
         }
     }
 }

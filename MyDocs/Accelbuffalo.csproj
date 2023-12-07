@@ -18,8 +18,10 @@
     <None Remove="Pages\fri.png" />
     <None Remove="Pages\logo.png" />
     <None Remove="Pages\logo2.png" />
+    <None Remove="Pages\logo_text.png" />
     <None Remove="Pages\papers2.png" />
     <None Remove="Pages\Person.png" />
+    <None Remove="Pages\productby.png" />
     <None Remove="Pages\Registration.png" />
     <None Remove="send.png" />
     <None Remove="ДОКУМЕНТЫ.png" />
@@ -50,8 +52,10 @@
     <Resource Include="Pages\fri.png" />
     <Resource Include="Pages\logo.png" />
     <Resource Include="Pages\logo2.png" />
+    <Resource Include="Pages\logo_text.png" />
     <Resource Include="Pages\papers2.png" />
     <Resource Include="Pages\Person.png" />
+    <Resource Include="Pages\productby.png" />
     <Resource Include="Pages\Registration.png" />
     <Resource Include="send.png" />
   </ItemGroup>

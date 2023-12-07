@@ -5,10 +5,17 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Accelbuffalo.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="500" d:DesignWidth="950"
+      d:DesignHeight="500" d:DesignWidth="950" Background="White"
       Title="Welcome">
 
-    <Grid>
-        
+    <Grid Loaded="Grid_Loaded">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Pages/Registration.png"/>
+        </Grid.Background>
+
+        <Image Source="/Pages/logo2.png" Height="320" Width="320" Margin="0,0,0,60"></Image>
+        <Image Source="/Pages/logo_text.png" VerticalAlignment="Bottom" Margin="0,0,0,50" Height="80"></Image>
+        <Image Source="/Pages/productby.png" VerticalAlignment="Bottom" Height="23" Margin="0,0,0,20"></Image>
+        <Image Source="/Pages/fri.png" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,10,10"></Image>
     </Grid>
 </Page>
