@@ -94,7 +94,7 @@
                             <Label Content="Даты сдачи отчётов" Foreground="White" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"></Label>
                         </Border>
 
-                        <Calendar Name="Calendar" DisplayDate="2023-01-01" Background="White" BorderBrush="#FF193DC8" Foreground="White" VerticalAlignment="Top" Margin="10,56,10,0" Height="170"/>
+                        <Calendar Name="Calendar" DisplayDate="2023-01-15" Background="White" BorderBrush="#FF193DC8" Foreground="White" VerticalAlignment="Top" Margin="10,56,10,0" Height="170" SelectedDate="2023-01-15"/>
                     </Grid>
                 </Border>
 

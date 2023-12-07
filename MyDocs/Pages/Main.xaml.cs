@@ -1,5 +1,6 @@
 ﻿using Accelbuffalo.Core;
 using Microsoft.Data.SqlClient;
+using Microsoft.Toolkit.Uwp.Notifications;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -26,8 +27,23 @@ namespace Accelbuffalo.Pages
         public Main()
         {
             InitializeComponent();          
-
             
+            Calendar.SelectedDate = DateTime.Now;
+            int selected_day = Calendar.SelectedDate.Value.Day;
+            int check_day = DateTime.DaysInMonth(Calendar.SelectedDate.Value.Year, Calendar.SelectedDate.Value.Month);
+            if (check_day - selected_day <= 25)
+            {
+                AddToast("Accelbuffalo", "Не забудьте отправить отчёт до конца месяца!");
+            }
+        }
+
+        // уведомленпие
+        void AddToast(string Header, string Description)
+        {
+            new ToastContentBuilder()
+                .AddText(Header)
+                .AddText(Description)
+                .Show();
         }
 
         // закрытие приложения
