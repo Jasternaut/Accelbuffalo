@@ -165,6 +165,19 @@ namespace Accelbuffalo.Pages
 
         private void send_to_email_MouseDown(object sender, MouseButtonEventArgs e)
         {
+
+            MailAddress from = new MailAddress("ruslik2806@gmail.com", "Test");
+            MailAddress to = new MailAddress("ruslik2806@outlook.com");
+            MailMessage m = new MailMessage(from, to);
+            m.Subject = "Тема письма";
+            m.Body = $"<h2>{Document_Viewer.Text}</h2>";
+            m.IsBodyHtml = true;
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 465);
+            smtp.Credentials = new NetworkCredential("ruslik2806@gmail.com", "h");
+            smtp.EnableSsl = true;
+            System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
+            smtp.Send(m);
+
             /*
             string to = "email to";
             string from = "email from";
