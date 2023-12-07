@@ -50,7 +50,12 @@
                         </Style>
                     </TextBox.Resources>
                 </TextBox>
-                <TextBox Name="organisation" Text="организация" VerticalContentAlignment="Center" Padding="10,0,0,0" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="226" Height="35" Margin="0,0,0,80">
+
+                <Label Height="35" Width="58" HorizontalAlignment="Left" Margin="10,90,0,0" Content="OOO" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" FontWeight="SemiBold"></Label>
+                <Label Height="35" Width="20" HorizontalAlignment="Left" Margin="62,90,0,0" Content="«" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" FontWeight="Bold"></Label>
+                <Label Height="35" Width="25" HorizontalAlignment="Right" Margin="0,90,13,0" Content="»" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" FontWeight="Bold"></Label>
+                
+                <TextBox Name="organisation" Text="" VerticalContentAlignment="Center" Padding="10,0,0,0" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="120" Height="35" Margin="45,0,0,80">
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="20"></Setter>

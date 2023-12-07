@@ -51,16 +51,24 @@ namespace Accelbuffalo.Pages
                     if (reader.Read())
                     {
                         reader.Close();
-                        MessageBox.Show("Аккаунт был найден! Теперь вы можете пользоваться приложением!");
 
-                        NavigationService nav;
-                        nav = NavigationService.GetNavigationService(this);
-                        nav.Navigate(new System.Uri("Pages\\Main.xaml", UriKind.RelativeOrAbsolute));
+                        OrganisationList list = new OrganisationList();
+                        foreach (string organ in list.GetOrganisations())
+                        {
+                            if (organisation.Text == organ)
+                            {
+                                MessageBox.Show("Аккаунт был найден! Теперь вы можете пользоваться приложением!");
 
-                        DatabaseCore core = new DatabaseCore();
-                        core.SetName(username.Text);
-                        core.SetOrganisation(organisation.Text);                        
-                        
+                                NavigationService nav;
+                                nav = NavigationService.GetNavigationService(this);
+                                nav.Navigate(new System.Uri("Pages\\Main.xaml", UriKind.RelativeOrAbsolute));
+
+                                DatabaseCore core = new DatabaseCore();
+                                core.SetName(username.Text);
+                                core.SetOrganisation(organisation.Text);
+                            }
+                            
+                        }                                                                     
                     }
                     else
                     {
@@ -72,25 +80,30 @@ namespace Accelbuffalo.Pages
                     // если пользователь  не зарегистрирован, то ...
                     reader.Close();
 
-                    command = new SqlCommand("INSERT INTO LoginTable (username, password, organisation) " +
-                        "VALUES(@username, @password, @organisation)", connection);
-                    command.Parameters.AddWithValue("@username", username.Text.ToString());
-                    command.Parameters.AddWithValue("@password", password.Text.ToString());
-                    command.Parameters.AddWithValue("@organisation", organisation.Text.ToString());
-                    command.ExecuteNonQuery();
+                    OrganisationList list = new OrganisationList();
+                    foreach (string organ in list.GetOrganisations())
+                    {
+                        if (organisation.Text == organ)
+                        {
+                            command = new SqlCommand("INSERT INTO LoginTable (username, password, organisation) " +
+                                "VALUES(@username, @password, @organisation)", connection);
+                            command.Parameters.AddWithValue("@username", username.Text.ToString());
+                            command.Parameters.AddWithValue("@password", password.Text.ToString());
+                            command.Parameters.AddWithValue("@organisation", organisation.Text.ToString());
+                            command.ExecuteNonQuery();
 
-                    MessageBox.Show("Аккаунт был успешно создан. Теперь вы можете пользоваться приложением!");
+                            MessageBox.Show("Аккаунт был успешно создан. Теперь вы можете пользоваться приложением!");
 
-                    NavigationService nav;
-                    nav = NavigationService.GetNavigationService(this);
-                    nav.Navigate(new System.Uri("Pages\\Main.xaml", UriKind.RelativeOrAbsolute));
+                            NavigationService nav;
+                            nav = NavigationService.GetNavigationService(this);
+                            nav.Navigate(new System.Uri("Pages\\Main.xaml", UriKind.RelativeOrAbsolute));
 
-                    DatabaseCore core = new DatabaseCore();
-                    core.SetName(username.Text);
-                    core.SetOrganisation(organisation.Text);
-
-                    
-                    
+                            DatabaseCore core = new DatabaseCore();
+                            core.SetName(username.Text);
+                            core.SetOrganisation(organisation.Text);
+                        }
+                        
+                    }                                                              
                 }
             }
             else

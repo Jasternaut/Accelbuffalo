@@ -146,7 +146,7 @@ namespace Accelbuffalo.Pages
             DatabaseCore core = new DatabaseCore();
             while (true)
             {
-                OrganisationLabel.Content = core.GetOrganisation();
+                OrganisationLabel.Content = "OOO «" + core.GetOrganisation() + "»";
                 await Task.Delay(2000);
             }
         }

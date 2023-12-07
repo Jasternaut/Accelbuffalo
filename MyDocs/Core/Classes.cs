@@ -28,4 +28,18 @@ namespace Accelbuffalo.Core
             return organisation;
         }
     }
+
+    class OrganisationList
+    {
+        public List<string> GetOrganisations()
+        {
+            return new List<string>()
+            {
+                "Apple",
+                "Samsung",
+                "Coders",
+                "Pelmeni",
+            };
+        }
+    }
 }
