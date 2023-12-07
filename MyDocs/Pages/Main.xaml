@@ -24,7 +24,7 @@
                     <Image Height="75" Width="75" HorizontalAlignment="Right" Margin="0,0,240,0" Source="/Pages/Person.png" ></Image>
                     <Border VerticalAlignment="Center" HorizontalAlignment="Right" Width="220" Height="50" Background="White" CornerRadius="10" Margin="0,0,40,0">
                         <Grid>
-                            <Label HorizontalAlignment="Center" VerticalAlignment="Top" Name="UsernameLabel" Content="Nickname" FontWeight="Bold" x:FieldModifier="public" Loaded="UsernameLabel_Loaded"></Label>
+                            <Label HorizontalAlignment="Center" VerticalAlignment="Top" Name="UsernameLabel" Content="Nickname" FontWeight="SemiBold" x:FieldModifier="public" Loaded="UsernameLabel_Loaded"></Label>
                             <Label HorizontalAlignment="Center" VerticalAlignment="Bottom" Name="OrganisationLabel" Content="organisation" x:FieldModifier="public" Loaded="OrganisationLabel_Loaded"></Label>
                         </Grid>
                     </Border>
@@ -39,6 +39,10 @@
                                 <Image Height="40" Width="40" HorizontalAlignment="Left" Margin="2,0,0,0" Source="/notify.png"/>
                             </Grid>
                         </Border>
+
+                        <ListBox BorderThickness="0" Name="notify_list" Background="Transparent" VerticalAlignment="Top" Height="314" Margin="0,55,0,0">
+                            
+                        </ListBox>
                     </Grid>
                 </Border>
 
@@ -105,7 +109,7 @@
                     </Grid>
                 </Border>
 
-                <Border VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="255" Height="55" Background="#0A2049" CornerRadius="10" Margin="0,0,10,14">
+                <Border Name="send_to_email" MouseDown="send_to_email_MouseDown" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="255" Height="55" Background="#0A2049" CornerRadius="10" Margin="0,0,10,14">
                     <Grid>
                         <Label VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Отправить" FontSize="18" Foreground="White" Margin="0,0,60,0"></Label>
                         <Image Height="25" Width="25" HorizontalAlignment="Left" Margin="9,0,0,0" Source="/send.png"/>

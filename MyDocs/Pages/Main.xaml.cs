@@ -3,8 +3,11 @@ using Microsoft.Data.SqlClient;
 using Microsoft.Toolkit.Uwp.Notifications;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -16,6 +19,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Color = System.Windows.Media.Color;
 
 namespace Accelbuffalo.Pages
 {
@@ -34,6 +38,13 @@ namespace Accelbuffalo.Pages
             if (check_day - selected_day <= 25)
             {
                 AddToast("Accelbuffalo", "Не забудьте отправить отчёт до конца месяца!");
+
+                ListBoxItem item = new ListBoxItem();
+                item.Height = 40;
+                item.Width = 205;
+                item.Background = new SolidColorBrush(Color.FromArgb(255,255,255,255));
+                item.Content = "Не забудьте отправить отчёт до конца месяца!";
+                notify_list.Items.Add(item);
             }
         }
 
@@ -149,6 +160,30 @@ namespace Accelbuffalo.Pages
                 OrganisationLabel.Content = "OOO «" + core.GetOrganisation() + "»";
                 await Task.Delay(2000);
             }
+        }
+
+        private void send_to_email_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            /*
+            string to = "email to";
+            string from = "email from";
+            string subject = "text";
+            string body = @"test";
+            MailMessage message = new MailMessage(from, to, subject, body);
+            SmtpClient client = new SmtpClient();
+            client.Timeout = 100;
+
+            client.Credentials = CredentialCache.DefaultNetworkCredentials;
+
+            try
+            {
+                client.Send(message);
+            }
+            catch (Exception ex)
+            {
+                
+            }
+            */
         }
     }
 }
